@@ -45,6 +45,18 @@ sudo vi /etc/default/ghost
 docker run --name some-ghost --env-file /etc/default/ghost -p 8080:2368 -d ptimof/ghost
 ```
 
+If you have just pulled the Docker image with `docker pull ptimof/ghost`, the example
+environment file looks like this:
+
+```
+# Ghost environment
+# Place in /etc/default/ghost
+
+GHOST_URL=http://www.example.com
+MAIL_FROM='"Webmaster" <webmaster@example.com>'
+MAIL_HOST=mail.example.com
+```
+
 ## Running in production
 
 The official Ghost image places the blog content in `/var/lib/ghost` and exports it as a `VOLUME`.
