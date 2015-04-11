@@ -86,3 +86,13 @@ docker run --name some-ghost --env-file /etc/default/ghost -p 80:2368 --volumes-
 ```
 
 You should now be able to access this instance as `http://www.example.com` in a browser.
+
+### Behind a reverse proxy
+
+Of course, you should really be running Ghost behind a reverse proxy, and set things up to auto restart. For that,
+a reasonable container would be:
+
+```
+docker create --name some-ghost -h ghost.example.com --env-file /etc/default/ghost -p 127.0.0.1:2368:2368 --volumes-from some-ghost-content --restart=on-failure:10 ptimof/ghost npm start --production
+docker run some-ghost
+```
