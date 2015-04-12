@@ -62,6 +62,9 @@ config = {
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '2368'
         },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
+        },
         logging: false
     },
 
