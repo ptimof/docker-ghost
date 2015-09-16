@@ -96,3 +96,10 @@ a reasonable container would be:
 docker create --name some-ghost -h ghost.example.com --env-file /etc/default/ghost -p 127.0.0.1:2368:2368 --volumes-from some-ghost-content --restart=on-failure:10 ptimof/ghost npm start --production
 docker run some-ghost
 ```
+## Further reading
+
+I've written a bit more about using Ghost as a Docker image:
+
+* [Hacking on Ghost themes](https://www.timofejew.com/hacking-ghost-themes/): a development workflow for modifying a Ghost theme.
+* [NGINX, Ghost, and hot-linked images](https://www.timofejew.com/nginx-ghost-stopping-hotlink-images/): NGINX configuration to prevent hotlinking images when proxying to Ghost.
+* [Moving to Docker: Ghost](https://www.timofejew.com/moving-to-docker-ghost/): Running Ghost as a production service in a container.
