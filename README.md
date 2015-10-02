@@ -101,5 +101,5 @@ docker run some-ghost
 I've written a bit more about using Ghost as a Docker image:
 
 * [Hacking on Ghost themes](https://www.timofejew.com/hacking-ghost-themes/): a development workflow for modifying a Ghost theme.
-* [NGINX, Ghost, and hot-linked images](https://www.timofejew.com/nginx-ghost-stopping-hotlink-images/): NGINX configuration to prevent hotlinking images when proxying to Ghost.
 * [Moving to Docker: Ghost](https://www.timofejew.com/moving-to-docker-ghost/): Running Ghost as a production service in a container.
+* [Moving to Docker: NGINX reverse proxy with SSL termination](https://www.timofejew.com/moving-to-docker-nginx/): a more complicated example of running Ghost in production, using NGINX to front-end Ghost, and Ghost using SASL (authenticated login) to a mail relay server.
